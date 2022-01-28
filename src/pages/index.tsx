@@ -1,5 +1,6 @@
-import type { NextPage } from "next";
+import { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 
 const Home: NextPage = () => (
@@ -10,7 +11,14 @@ const Home: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main>Home</main>
+    <main>
+      <span>메뉴</span>
+      <nav>
+        <Link href="/sign">
+          <a>Sign</a>
+        </Link>
+      </nav>
+    </main>
   </div>
 );
 
