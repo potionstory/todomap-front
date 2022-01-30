@@ -1,9 +1,17 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import React from "react";
 
 const Sign: NextPage = () => (
   <>
-    <div>Sign</div>
+    <section>
+      <span>메뉴</span>
+      <nav>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </nav>
+    </section>
   </>
 );
 
