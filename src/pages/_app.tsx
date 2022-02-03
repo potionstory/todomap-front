@@ -1,7 +1,8 @@
 import { AppProps } from "next/app";
 import React from "react";
 import { RecoilRoot } from "recoil";
-import Layout from "../Layout";
+import Layout from "../components/base/Layout";
+import "../styles/font.css";
 import DebugObserver from "./DebugObserver";
 
 const App = ({ Component, pageProps }: AppProps) => (

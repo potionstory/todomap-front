@@ -1,7 +1,8 @@
 import React from "react";
 import { useSetRecoilState } from "recoil";
-import { themeState } from "../../state/global";
-import { Theme } from "../../type/global";
+import { themeState } from "../../../states/global";
+import { Theme } from "../../../types/global";
+import { HeaderWrap } from "./style";
 
 const Header = () => {
   const setTheme = useSetRecoilState<Theme>(themeState);
@@ -10,12 +11,12 @@ const Header = () => {
   };
 
   return (
-    <>
+    <HeaderWrap>
       <div>Header</div>
       <button type="button" onClick={toggleTheme}>
         theme toggle button
       </button>
-    </>
+    </HeaderWrap>
   );
 };
 export default Header;
