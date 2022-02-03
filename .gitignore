@@ -44,3 +44,6 @@ firebase.json
 # .env
 .env.development
 .env.production
+
+# babel
+.babelrc
