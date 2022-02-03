@@ -1,28 +1,16 @@
 import { AppProps } from "next/app";
-import React, { useState } from "react";
-import { ThemeProvider } from "styled-components";
+import React from "react";
+import { RecoilRoot } from "recoil";
 import Layout from "../Layout";
-import GlobalStyle from "../styles/global";
-import { dark, light } from "../styles/theme";
+import DebugObserver from "./DebugObserver";
 
-const App = ({ Component, pageProps }: AppProps) => {
-  const [themeMode, setThemeMode] = useState("light");
-  const theme = themeMode === "light" ? light : dark;
-
-  const toggleTheme = () => {
-    setThemeMode(themeMode === "light" ? "dark" : "light");
-  };
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Layout>
-        <Component {...pageProps} />
-        <button type="button" onClick={toggleTheme}>
-          테마 토글
-        </button>
-      </Layout>
-    </ThemeProvider>
-  );
-};
+const App = ({ Component, pageProps }: AppProps) => (
+  <RecoilRoot>
+    <DebugObserver />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </RecoilRoot>
+);
 
 export default App;
