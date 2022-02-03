@@ -40,3 +40,7 @@ yarn-error.log*
 /.firebase
 .firebaserc
 firebase.json
+
+# .env
+.env.development
+.env.production
