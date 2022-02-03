@@ -12,7 +12,7 @@ const Home: NextPage = () => (
     </Head>
 
     <section>
-      <span>메뉴</span>
+      <span>menu</span>
       <nav>
         <Link href="/sign">
           <a>Sign</a>

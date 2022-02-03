@@ -5,7 +5,7 @@ import React from "react";
 const Sign: NextPage = () => (
   <>
     <section>
-      <span>메뉴</span>
+      <span>menu</span>
       <nav>
         <Link href="/">
           <a>Home</a>
