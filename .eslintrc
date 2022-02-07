@@ -9,6 +9,7 @@
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "next",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -19,12 +20,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "import",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint"],
   "rules": {
     "arrow-body-style": "error",
     "prefer-arrow-callback": "off",
@@ -33,6 +29,24 @@
     "react/prop-types": "off",
     "quotes": ["error", "double"],
     "import/no-unresolved": 0,
-    "object-curly-spacing": [2, "always"]
+    "object-curly-spacing": [2, "always"],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }
